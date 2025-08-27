@@ -1,0 +1,21 @@
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+data/raw/*
+data/interim/*
+data/processed/*
+.vscode/
+
+# OS-specific
+.DS_Store
+
+# Python build artifacts
+*.pyc
+*.pyo
+*.pyd
+
+# Parquet and other large intermediate files
+*.parquet
+
+# Hugging Face cache
+data/hf_cache/*

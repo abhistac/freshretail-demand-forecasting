@@ -1,0 +1,1 @@
+{"created_at": "2025-08-26T23:17:09.969786Z", "features": ["dayofweek", "is_weekend", "month", "lag_1", "lag_7", "roll_7_mean", "roll_30_mean", "discount", "holiday_flag", "activity_flag", "precpt", "avg_temperature", "avg_humidity", "avg_wind_level", "instock_frac", "hours_sale_mean", "hours_sale_max"], "cutoff_date": "2024-05-26", "model_type": "xgboost"}
