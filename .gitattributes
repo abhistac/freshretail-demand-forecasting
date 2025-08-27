@@ -1,0 +1,32 @@
+# ================================
+# Git Attributes for FreshRetailNet
+# ================================
+
+# Ensure consistent line endings
+* text=auto eol=lf
+
+# Treat Jupyter notebooks as text for better diffs on GitHub
+*.ipynb filter=nbstripout diff=jupyternotebook
+
+# Handle common file types
+*.py text diff=python
+*.md text
+*.yml text
+*.yaml text
+*.csv text
+*.json text
+*.txt text
+*.html text
+*.css text
+*.js text
+
+# Binary files (don’t diff)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.pdf binary
+*.pkl binary
+*.joblib binary
+*.gz binary
+*.zip binary
