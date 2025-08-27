@@ -51,6 +51,32 @@ freshretail-demand-forecasting/
 
 ---
 
+## 🧠 Models
+
+The `models/` folder contains the saved machine learning models used in this project.
+
+- **`xgb_baseline.json`**
+  - Trained XGBoost regressor for demand forecasting.
+  - Achieved best performance (RMSE ≈ 10.4, MAPE ≈ 3.6%).
+
+- **`xgb_meta.json`**
+  - Metadata and configuration for the baseline XGBoost model (training parameters, feature mapping).
+
+### Reloading Models
+
+To reload the XGBoost baseline model:
+
+```python
+import xgboost as xgb
+
+booster = xgb.Booster()
+booster.load_model("models/xgb_baseline.json")
+```
+
+Make sure to install dependencies from `requirements.txt` before reloading.
+
+---
+
 ## 🔍 Exploratory Data Analysis
 
 - Distribution of sales volumes.
@@ -125,7 +151,17 @@ Explore the results live:\
 
 ## ▶️ How to Reproduce
 
+### (Optional) Enable Clean Notebook Diffs in Git
+
+To avoid noisy diffs from Jupyter notebooks, you can set up `nbstripout` to automatically clean outputs before commits:
+
 ```bash
+# 0. (Optional) Enable clean notebook diffs in GitHub
+make install
+make install-kernel
+pip install nbstripout
+nbstripout --install
+
 # 1. Create virtual environment
 make env
 
@@ -155,3 +191,9 @@ make forecast14
 - Delivered a **Tableau Public dashboard** with interactive model comparison, validation results, and forward forecasts by store.
 
 ---
+## 📊 Dataset
+
+- FreshRetailNet-50K, published by Dingdong Inc. on Hugging Face.
+
+---
+
